@@ -4,15 +4,8 @@
 
 plugins = ["scratchpads", "magnify"]
 
-# [scratchpads.term]
-# animation = "fromTop"
-# command = "kitty --class kitty-dropterm"
-# class = "kitty-dropterm"
-# size = "75% 60%"
-
-
 [scratchpads.term]
 animation = "fromTop"
-command = "ghostty"
-class = "kitty-dropterm"
+command = "ghostty --class=\"com.ghostty.ghostty-dropterm\""
+class = "com.ghostty.ghostty-dropterm"
 size = "75% 60%"
