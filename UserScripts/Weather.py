@@ -59,7 +59,9 @@ status = html_data("div[data-testid='wxPhrase']").text()
 status = f"{status[:16]}.." if len(status) > 17 else status
 
 # status code
-status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
+# print(html_data("#regionHeader"))
+# status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
+status_code = "default"
 
 # status icon
 icon = (
@@ -111,7 +113,8 @@ prediction = f"\n\n (hourly) {prediction}" if len(prediction) > 0 else predic
 
 # tooltip text
 tooltip_text = str.format(
-    "{}{}\n{}\n{}\n\n{}\n{}\n{}{}",
+    # "{}{}\n{}\n{}\n\n{}\n{}\n{}{}",
+    "{}{}\n{}\n{}\n\n{}\n{}\n{}",
     f"<big>{icon} </big>",
     f'<span size="xx-large">{temp}</span>',
     f"<b>{status}</b>",
@@ -119,7 +122,7 @@ tooltip_text = str.format(
     f"<b>{temp_min_max}</b>",
     f"{wind_text}\t{humidity_text}",
     f"{visibility_text}\tAQI {air_quality_index}",
-    f"<i> {prediction}</i>",
+    # f"<i> {prediction}</i>",
 )
 
 # print waybar module data
